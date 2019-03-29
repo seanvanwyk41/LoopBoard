@@ -140,9 +140,11 @@ assign write_audio_out = audio_in_available & audio_out_allowed;
  *****************************************************************************/
 wire [31:0] left_audio_cccor_out;
 wire [31:0] right_audio_cccor_out;
-
 wire [31:0] left_audio_filters_out;
 wire [31:0] right_audio_filters_out;
+wire [31:0] left_audio_volume_out;
+wire [31:0] right_audio_volume_out;
+wire [1:0] volume_display;
 
 wire [3:0] count0;
 wire [3:0] count1;
@@ -152,7 +154,7 @@ wire [3:0] count3;
 // hex display settings
 hex_display h7(0,HEX7);
 hex_display h0(0,HEX6);
-hex_display h6(0,HEX5);
+hex_display h6(volume_display,HEX5);
 hex_display h5(0,HEX4);
 hex_display h4(count3,HEX3);
 hex_display h3(count2,HEX2);
@@ -172,25 +174,7 @@ AllFilters filters(
 	.right_channel_audio_out(right_audio_filters_out)
 );
 
-// Volume Controller
-/*
- * Volume (BETA): 0%, 33%, 66%, 100%
- * 0% by default
- * 33% volume if SW[6] high
- * 66% volume if SW[7] high
- * 100% volume if SW[7] and SW[6] high
-*/
-/*
-Volume volume(
-	.left_channel_audio_in(left_audio_cccor_out),
-	.right_channel_audio_in(right_audio_cccor_out),
-	.level(SW[7:6]),
-	.left_channel_audio_out(left_channel_audio_out),
-	.right_channel_audio_out(right_channel_audio_out)
-);
-*/
-
-// Cuttoff controller 
+// Cutoff controller 
 CutOffCutOnRepeat cccor(
 	.left_channel_audio_in(left_audio_filters_out),
 	.right_channel_audio_in(right_audio_filters_out),
@@ -199,7 +183,17 @@ CutOffCutOnRepeat cccor(
 	.left_channel_audio_out(left_audio_cccor_out),
 	.right_channel_audio_out(right_audio_cccor_out)
 );
- 
+
+// Volume Controller
+AudioVolume volume(
+	.left_channel_audio_in(left_audio_cccor_out),
+	.right_channel_audio_in(right_audio_cccor_out),
+	.level(SW[11:10]),
+	.clock(CLOCK_50),
+	.left_channel_audio_out(left_audio_volume_out),
+	.right_channel_audio_out(right_audio_volume_out),
+	.volume(volume_display)
+);
  
 // Loop controllers
 loop l0 (			
@@ -207,8 +201,8 @@ loop l0 (
 .clk							(CLOCK_50),						// in			:System clock set to 50 Mhz
 .readdata					(readdata),						// in [31:0]:Read data from sdram
 .record						(SW[16]),
-.left_channel_audio_in	(left_audio_cccor_out),		// in [31:0]:Left audio channel in
-.right_channel_audio_in	(right_audio_cccor_out),	// in [31:0]:Right channel audio in
+.left_channel_audio_in	(left_audio_volume_out),		// in [31:0]:Left audio channel in
+.right_channel_audio_in	(right_audio_volume_out),	// in [31:0]:Right channel audio in
 .reset						(reset),							// in			:Async Reset
 .channel						(SW[3:0]),							// in [3:0]	:4 way channel Select
 .play							(play),							// in 		:Play read audio

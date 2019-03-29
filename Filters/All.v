@@ -67,7 +67,7 @@ LowPassFilter lowpass(
 	.reset(reset),
 	.AUD_BCLK(AUD_BCLK),
 	.AUD_DACLRCK(AUD_DACLRCK),
-	.alpha_prime(32'd50),
+	.alpha_prime(32'd15),
 	.left_channel_audio_out(left_channel_audio_out_lowpass),
 	.right_channel_audio_out(right_channel_audio_out_lowpass)
 );

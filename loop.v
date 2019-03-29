@@ -43,11 +43,11 @@ module loop(aud_clk,							// in 		:Audio clock set to 48 Khz
 	reg [24:0] address2 = 2;
 	reg [24:0] address3 = 3;
 	reg left;
-	reg [3:0] counter; 
+	reg [4:0] counter; 
 	reg [31:0] out;
 	// Constants
 	reg [24:0] max_address = 25'd3072000;
-	reg [4:0]  switch_delay = 5'b1111;
+	reg [4:0]  switch_delay = 5'b01111;
 	// Loop box registers
 	reg [31:0] loop1_left_out;
 	reg [31:0] loop2_left_out;
@@ -112,13 +112,14 @@ module loop(aud_clk,							// in 		:Audio clock set to 48 Khz
 						begin
 							writedata = channel[0] * left_channel_audio_in;			// Works
 							write_en = channel[0] && record;
+							address_out = address0 + 1;
 							
 						end
 					// Read
 					3'b0001: 
 						begin
 							loop1_left_out =  channel[0]* play * readdata;
-							address_out = address0;
+							
 						end
 					// Right
 					// write
@@ -126,12 +127,13 @@ module loop(aud_clk,							// in 		:Audio clock set to 48 Khz
 						begin
 							writedata = channel[0] * right_channel_audio_in;
 							write_en = channel[0] && record;
+							address_out = address1;
 						end
 					// Read
 					3'b0011:
 						begin
 							loop1_right_out = channel[0] * play * readdata;			// Doesnt work
-							address_out = address0 + 1;
+							
 						end
 					// Loop 2
 					// Left
@@ -140,13 +142,14 @@ module loop(aud_clk,							// in 		:Audio clock set to 48 Khz
 						begin
 							writedata = channel[1] * left_channel_audio_in;
 							write_en = channel[1] && record;
+							address_out = address1 + 1;
 							
 						end
 					// Read
 					3'b0101:
 						begin
 							loop2_left_out = channel[1] * play * readdata;		 // Works
-							address_out = address1;
+							
 					end
 					// Right
 					// write
@@ -154,13 +157,14 @@ module loop(aud_clk,							// in 		:Audio clock set to 48 Khz
 						begin
 							writedata = channel[1] * right_channel_audio_in;
 							write_en = channel[1] && record;
+							address_out = address2;
 							
 						end
 					// Read
 					3'b0111:
 						begin
 							loop2_right_out = channel[1] * play * readdata;		// Works
-							address_out = address1 + 1;
+							
 						end
 					// Loop 3
 					// Left
@@ -169,27 +173,30 @@ module loop(aud_clk,							// in 		:Audio clock set to 48 Khz
 						begin
 							writedata = channel[2] * left_channel_audio_in;
 							write_en = channel[2] && record;
+							address_out = address2+1;
 							
 						end
 					// Read
 					3'b1001:
 						begin
 							loop3_left_out = channel[2] * play * readdata;		// Works
-							address_out = address2;
+							
 						end
 					// Right
-					// write
+					// write	end
+
 					3'b1010:
 						begin
 							writedata = channel[2] * right_channel_audio_in;	//Works
 							write_en = channel[2] && record;
+							address_out = address3;
 							
 						end
 					// Read
 					3'b1011:
 						begin
 							loop3_right_out = channel[2] * play * readdata;
-							address_out = address2 + 1;
+							
 						end
 					// Loop 4
 					// Left
@@ -198,13 +205,14 @@ module loop(aud_clk,							// in 		:Audio clock set to 48 Khz
 						begin
 							writedata = channel[3] * left_channel_audio_in;  	// Works
 							write_en = channel[3] && record;
+							address_out = address3+1;
 						end
 					// Read
 					3'b1101:
 						begin
 							
 							loop4_left_out = channel[3] * play * readdata;
-							address_out = address3;
+							
 						end
 					// Right
 					// write
@@ -212,12 +220,13 @@ module loop(aud_clk,							// in 		:Audio clock set to 48 Khz
 						begin
 							writedata = channel[3] * right_channel_audio_in;	// Plays loop 3
 							write_en = channel[3] && record;
+							address_out = address0;
 						end
 					// Read
 					3'b1111:
 						begin
 							loop4_right_out = channel[3] * play * readdata;
-							address_out = address3 + 1;
+							
 						end
 					default:;
 				endcase
