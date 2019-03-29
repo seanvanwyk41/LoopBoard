@@ -1,5 +1,5 @@
 Flow report for Project2
-Fri Mar 29 16:45:24 2019
+Fri Mar 29 17:04:43 2019
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -41,15 +41,15 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Mar 29 16:45:24 2019       ;
+; Flow Status                        ; Successful - Fri Mar 29 17:04:43 2019       ;
 ; Quartus Prime Version              ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name                      ; Project2                                    ;
 ; Top-level Entity Name              ; Project2                                    ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 11,163 / 114,480 ( 10 % )                   ;
-;     Total combinational functions  ; 10,845 / 114,480 ( 9 % )                    ;
+; Total logic elements               ; 11,386 / 114,480 ( 10 % )                   ;
+;     Total combinational functions  ; 11,089 / 114,480 ( 10 % )                   ;
 ;     Dedicated logic registers      ; 1,255 / 114,480 ( 1 % )                     ;
 ; Total registers                    ; 1378                                        ;
 ; Total pins                         ; 163 / 529 ( 31 % )                          ;
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/29/2019 16:38:48 ;
+; Start date & time ; 03/29/2019 16:58:41 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Project2            ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 268891676029491.155389192809565       ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 268891675945911.155389312106607       ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                           ; --            ; --          ; eda_simulation ;
 ; EDA_RUN_TOOL_AUTOMATICALLY          ; Off                                   ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)             ; <None>        ; --          ; --             ;
@@ -98,12 +98,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:40     ; 1.0                     ; 1329 MB             ; 00:01:02                           ;
-; Fitter                    ; 00:02:28     ; 1.0                     ; 1678 MB             ; 00:02:29                           ;
+; Analysis & Synthesis      ; 00:00:38     ; 1.0                     ; 1307 MB             ; 00:00:55                           ;
+; Fitter                    ; 00:02:24     ; 1.0                     ; 1680 MB             ; 00:02:21                           ;
 ; Assembler                 ; 00:00:04     ; 1.0                     ; 1108 MB             ; 00:00:03                           ;
-; TimeQuest Timing Analyzer ; 00:03:09     ; 1.0                     ; 1313 MB             ; 00:03:08                           ;
-; EDA Netlist Writer        ; 00:00:10     ; 1.0                     ; 1410 MB             ; 00:00:08                           ;
-; Total                     ; 00:06:31     ; --                      ; --                  ; 00:06:50                           ;
+; TimeQuest Timing Analyzer ; 00:02:39     ; 1.0                     ; 1307 MB             ; 00:02:38                           ;
+; EDA Netlist Writer        ; 00:00:09     ; 1.0                     ; 1415 MB             ; 00:00:08                           ;
+; Total                     ; 00:05:54     ; --                      ; --                  ; 00:06:05                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -112,11 +112,11 @@ agreement for further details.
 +---------------------------+------------------+----------------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
 +---------------------------+------------------+----------------+------------+----------------+
-; Analysis & Synthesis      ; IITS-I406-49     ; Ubuntu 16.04.5 ; 16         ; x86_64         ;
-; Fitter                    ; IITS-I406-49     ; Ubuntu 16.04.5 ; 16         ; x86_64         ;
-; Assembler                 ; IITS-I406-49     ; Ubuntu 16.04.5 ; 16         ; x86_64         ;
-; TimeQuest Timing Analyzer ; IITS-I406-49     ; Ubuntu 16.04.5 ; 16         ; x86_64         ;
-; EDA Netlist Writer        ; IITS-I406-49     ; Ubuntu 16.04.5 ; 16         ; x86_64         ;
+; Analysis & Synthesis      ; IITS-I406-39     ; Ubuntu 16.04.5 ; 16         ; x86_64         ;
+; Fitter                    ; IITS-I406-39     ; Ubuntu 16.04.5 ; 16         ; x86_64         ;
+; Assembler                 ; IITS-I406-39     ; Ubuntu 16.04.5 ; 16         ; x86_64         ;
+; TimeQuest Timing Analyzer ; IITS-I406-39     ; Ubuntu 16.04.5 ; 16         ; x86_64         ;
+; EDA Netlist Writer        ; IITS-I406-39     ; Ubuntu 16.04.5 ; 16         ; x86_64         ;
 +---------------------------+------------------+----------------+------------+----------------+
 
 

@@ -21,7 +21,7 @@ module HighPassFilter(
 	output reg [31:0] left_channel_audio_out;
 	output reg [31:0] right_channel_audio_out;
 
-	reg [31:0] alpha_prime = 32'd60; // alpha prime is 60 so alpha is 0.6
+	reg [31:0] alpha_prime = 32'd10; // alpha prime is 10 so alpha is 0.1
 	reg [31:0] previous_left_channel_audio_in = 32'd0;
 	reg [31:0] previous_right_channel_audio_in = 32'd0;
 	reg [31:0] previous_left_channel_audio_out = 32'd0;

@@ -51,7 +51,7 @@ begin
 			right_channel_audio_out = right_channel_audio_out_highpass;
 		end
 		2'b11: begin
-			left_channel_audio_out = left_channel_audio_out_bandpass;
+			left_channel_audio_out = 32'b11111111111111111111111111;
 			right_channel_audio_out = right_channel_audio_out_bandpass;
 		end
 		default: begin
@@ -67,7 +67,7 @@ LowPassFilter lowpass(
 	.reset(reset),
 	.AUD_BCLK(AUD_BCLK),
 	.AUD_DACLRCK(AUD_DACLRCK),
-	.alpha_prime(32'd50),
+	.alpha_prime(32'd10),
 	.left_channel_audio_out(left_channel_audio_out_lowpass),
 	.right_channel_audio_out(right_channel_audio_out_lowpass)
 );
