@@ -12,7 +12,8 @@ module AllFilters(
 	
 	// Outputs
 	left_channel_audio_out,
-	right_channel_audio_out
+	right_channel_audio_out,
+	choice_display
 );
 
 // Inputs
@@ -29,6 +30,7 @@ inout AUD_DACLRCK;
 // Outputs
 output reg [31:0] left_channel_audio_out;
 output reg [31:0] right_channel_audio_out;
+output reg [1:0] choice_display;
 
 // Wires
 wire [31:0] left_channel_audio_out_lowpass;
@@ -45,18 +47,22 @@ begin
 		2'b01: begin
 			left_channel_audio_out = left_channel_audio_out_lowpass;
 			right_channel_audio_out = right_channel_audio_out_lowpass;
+			choice_display = 2'b01;
 		end
 		2'b10: begin
 			left_channel_audio_out = left_channel_audio_out_highpass;
 			right_channel_audio_out = right_channel_audio_out_highpass;
+			choice_display = 2'b10;
 		end
 		2'b11: begin
 			left_channel_audio_out = 32'b11111111111111111111111111;
 			right_channel_audio_out = right_channel_audio_out_bandpass;
+			choice_display = 2'b11;
 		end
 		default: begin
 			left_channel_audio_out = left_channel_audio_in;
 			right_channel_audio_out = right_channel_audio_in;
+			choice_display = 2'b00;
 		end
 	endcase
 end

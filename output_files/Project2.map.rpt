@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Project2
-Fri Mar 29 16:59:21 2019
+Fri Mar 29 17:27:51 2019
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -111,13 +111,13 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Mar 29 16:59:20 2019       ;
+; Analysis & Synthesis Status        ; Successful - Fri Mar 29 17:27:51 2019       ;
 ; Quartus Prime Version              ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name                      ; Project2                                    ;
 ; Top-level Entity Name              ; Project2                                    ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 11,458                                      ;
-;     Total combinational functions  ; 11,088                                      ;
+; Total logic elements               ; 11,469                                      ;
+;     Total combinational functions  ; 11,099                                      ;
 ;     Dedicated logic registers      ; 1,313                                       ;
 ; Total registers                    ; 1313                                        ;
 ; Total pins                         ; 163                                         ;
@@ -295,16 +295,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 11,458         ;
+; Estimated Total logic elements              ; 11,469         ;
 ;                                             ;                ;
-; Total combinational functions               ; 11088          ;
+; Total combinational functions               ; 11099          ;
 ; Logic element usage by number of LUT inputs ;                ;
 ;     -- 4 input functions                    ; 3377           ;
-;     -- 3 input functions                    ; 3971           ;
-;     -- <=2 input functions                  ; 3740           ;
+;     -- 3 input functions                    ; 3972           ;
+;     -- <=2 input functions                  ; 3750           ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 7354           ;
+;     -- normal mode                          ; 7365           ;
 ;     -- arithmetic mode                      ; 3734           ;
 ;                                             ;                ;
 ; Total registers                             ; 1313           ;
@@ -321,7 +321,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 1139           ;
-; Total fan-out                               ; 39407          ;
+; Total fan-out                               ; 39436          ;
 ; Average fan-out                             ; 3.06           ;
 +---------------------------------------------+----------------+
 
@@ -331,37 +331,37 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+--------------+
 ; Compilation Hierarchy Node                                                     ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                        ; Entity Name                     ; Library Name ;
 +--------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+--------------+
-; |Project2                                                                      ; 11088 (1)         ; 1313 (0)     ; 16384       ; 0            ; 0       ; 0         ; 163  ; 0            ; |Project2                                                                                                                                                                                                                                  ; Project2                        ; work         ;
-;    |AllFilters:filters|                                                        ; 8385 (0)          ; 224 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters                                                                                                                                                                                                               ; AllFilters                      ; work         ;
-;       |BandPassFilter:bandpass|                                                ; 1711 (0)          ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|BandPassFilter:bandpass                                                                                                                                                                                       ; BandPassFilter                  ; work         ;
-;          |LowPassFilter:lowpass|                                               ; 1711 (64)         ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|BandPassFilter:bandpass|LowPassFilter:lowpass                                                                                                                                                                 ; LowPassFilter                   ; work         ;
-;             |lpm_divide:Div1|                                                  ; 1647 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|BandPassFilter:bandpass|LowPassFilter:lowpass|lpm_divide:Div1                                                                                                                                                 ; lpm_divide                      ; work         ;
-;                |lpm_divide_92p:auto_generated|                                 ; 1647 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|BandPassFilter:bandpass|LowPassFilter:lowpass|lpm_divide:Div1|lpm_divide_92p:auto_generated                                                                                                                   ; lpm_divide_92p                  ; work         ;
-;                   |abs_divider_4dg:divider|                                    ; 1647 (62)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|BandPassFilter:bandpass|LowPassFilter:lowpass|lpm_divide:Div1|lpm_divide_92p:auto_generated|abs_divider_4dg:divider                                                                                           ; abs_divider_4dg                 ; work         ;
+; |Project2                                                                      ; 11099 (1)         ; 1313 (0)     ; 16384       ; 0            ; 0       ; 0         ; 163  ; 0            ; |Project2                                                                                                                                                                                                                                  ; Project2                        ; work         ;
+;    |AllFilters:filters|                                                        ; 8394 (0)          ; 224 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters                                                                                                                                                                                                               ; AllFilters                      ; work         ;
+;       |BandPassFilter:bandpass|                                                ; 1717 (0)          ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|BandPassFilter:bandpass                                                                                                                                                                                       ; BandPassFilter                  ; work         ;
+;          |LowPassFilter:lowpass|                                               ; 1717 (64)         ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|BandPassFilter:bandpass|LowPassFilter:lowpass                                                                                                                                                                 ; LowPassFilter                   ; work         ;
+;             |lpm_divide:Div1|                                                  ; 1653 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|BandPassFilter:bandpass|LowPassFilter:lowpass|lpm_divide:Div1                                                                                                                                                 ; lpm_divide                      ; work         ;
+;                |lpm_divide_92p:auto_generated|                                 ; 1653 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|BandPassFilter:bandpass|LowPassFilter:lowpass|lpm_divide:Div1|lpm_divide_92p:auto_generated                                                                                                                   ; lpm_divide_92p                  ; work         ;
+;                   |abs_divider_4dg:divider|                                    ; 1653 (62)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|BandPassFilter:bandpass|LowPassFilter:lowpass|lpm_divide:Div1|lpm_divide_92p:auto_generated|abs_divider_4dg:divider                                                                                           ; abs_divider_4dg                 ; work         ;
 ;                      |alt_u_div_6af:divider|                                   ; 1529 (1529)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|BandPassFilter:bandpass|LowPassFilter:lowpass|lpm_divide:Div1|lpm_divide_92p:auto_generated|abs_divider_4dg:divider|alt_u_div_6af:divider                                                                     ; alt_u_div_6af                   ; work         ;
-;                      |lpm_abs_i0a:my_abs_num|                                  ; 56 (56)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|BandPassFilter:bandpass|LowPassFilter:lowpass|lpm_divide:Div1|lpm_divide_92p:auto_generated|abs_divider_4dg:divider|lpm_abs_i0a:my_abs_num                                                                    ; lpm_abs_i0a                     ; work         ;
-;       |HighPassFilter:highpass|                                                ; 3339 (129)        ; 128 (128)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|HighPassFilter:highpass                                                                                                                                                                                       ; HighPassFilter                  ; work         ;
-;          |lpm_divide:Div0|                                                     ; 1603 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|HighPassFilter:highpass|lpm_divide:Div0                                                                                                                                                                       ; lpm_divide                      ; work         ;
-;             |lpm_divide_92p:auto_generated|                                    ; 1603 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|HighPassFilter:highpass|lpm_divide:Div0|lpm_divide_92p:auto_generated                                                                                                                                         ; lpm_divide_92p                  ; work         ;
-;                |abs_divider_4dg:divider|                                       ; 1603 (62)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|HighPassFilter:highpass|lpm_divide:Div0|lpm_divide_92p:auto_generated|abs_divider_4dg:divider                                                                                                                 ; abs_divider_4dg                 ; work         ;
+;                      |lpm_abs_i0a:my_abs_num|                                  ; 62 (62)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|BandPassFilter:bandpass|LowPassFilter:lowpass|lpm_divide:Div1|lpm_divide_92p:auto_generated|abs_divider_4dg:divider|lpm_abs_i0a:my_abs_num                                                                    ; lpm_abs_i0a                     ; work         ;
+;       |HighPassFilter:highpass|                                                ; 3341 (129)        ; 128 (128)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|HighPassFilter:highpass                                                                                                                                                                                       ; HighPassFilter                  ; work         ;
+;          |lpm_divide:Div0|                                                     ; 1604 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|HighPassFilter:highpass|lpm_divide:Div0                                                                                                                                                                       ; lpm_divide                      ; work         ;
+;             |lpm_divide_92p:auto_generated|                                    ; 1604 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|HighPassFilter:highpass|lpm_divide:Div0|lpm_divide_92p:auto_generated                                                                                                                                         ; lpm_divide_92p                  ; work         ;
+;                |abs_divider_4dg:divider|                                       ; 1604 (62)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|HighPassFilter:highpass|lpm_divide:Div0|lpm_divide_92p:auto_generated|abs_divider_4dg:divider                                                                                                                 ; abs_divider_4dg                 ; work         ;
 ;                   |alt_u_div_6af:divider|                                      ; 1502 (1502)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|HighPassFilter:highpass|lpm_divide:Div0|lpm_divide_92p:auto_generated|abs_divider_4dg:divider|alt_u_div_6af:divider                                                                                           ; alt_u_div_6af                   ; work         ;
-;                   |lpm_abs_i0a:my_abs_num|                                     ; 39 (39)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|HighPassFilter:highpass|lpm_divide:Div0|lpm_divide_92p:auto_generated|abs_divider_4dg:divider|lpm_abs_i0a:my_abs_num                                                                                          ; lpm_abs_i0a                     ; work         ;
-;          |lpm_divide:Div1|                                                     ; 1607 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|HighPassFilter:highpass|lpm_divide:Div1                                                                                                                                                                       ; lpm_divide                      ; work         ;
-;             |lpm_divide_92p:auto_generated|                                    ; 1607 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|HighPassFilter:highpass|lpm_divide:Div1|lpm_divide_92p:auto_generated                                                                                                                                         ; lpm_divide_92p                  ; work         ;
-;                |abs_divider_4dg:divider|                                       ; 1607 (62)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|HighPassFilter:highpass|lpm_divide:Div1|lpm_divide_92p:auto_generated|abs_divider_4dg:divider                                                                                                                 ; abs_divider_4dg                 ; work         ;
+;                   |lpm_abs_i0a:my_abs_num|                                     ; 40 (40)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|HighPassFilter:highpass|lpm_divide:Div0|lpm_divide_92p:auto_generated|abs_divider_4dg:divider|lpm_abs_i0a:my_abs_num                                                                                          ; lpm_abs_i0a                     ; work         ;
+;          |lpm_divide:Div1|                                                     ; 1608 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|HighPassFilter:highpass|lpm_divide:Div1                                                                                                                                                                       ; lpm_divide                      ; work         ;
+;             |lpm_divide_92p:auto_generated|                                    ; 1608 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|HighPassFilter:highpass|lpm_divide:Div1|lpm_divide_92p:auto_generated                                                                                                                                         ; lpm_divide_92p                  ; work         ;
+;                |abs_divider_4dg:divider|                                       ; 1608 (62)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|HighPassFilter:highpass|lpm_divide:Div1|lpm_divide_92p:auto_generated|abs_divider_4dg:divider                                                                                                                 ; abs_divider_4dg                 ; work         ;
 ;                   |alt_u_div_6af:divider|                                      ; 1502 (1502)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|HighPassFilter:highpass|lpm_divide:Div1|lpm_divide_92p:auto_generated|abs_divider_4dg:divider|alt_u_div_6af:divider                                                                                           ; alt_u_div_6af                   ; work         ;
-;                   |lpm_abs_i0a:my_abs_num|                                     ; 43 (43)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|HighPassFilter:highpass|lpm_divide:Div1|lpm_divide_92p:auto_generated|abs_divider_4dg:divider|lpm_abs_i0a:my_abs_num                                                                                          ; lpm_abs_i0a                     ; work         ;
-;       |LowPassFilter:lowpass|                                                  ; 3335 (128)        ; 64 (64)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|LowPassFilter:lowpass                                                                                                                                                                                         ; LowPassFilter                   ; work         ;
+;                   |lpm_abs_i0a:my_abs_num|                                     ; 44 (44)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|HighPassFilter:highpass|lpm_divide:Div1|lpm_divide_92p:auto_generated|abs_divider_4dg:divider|lpm_abs_i0a:my_abs_num                                                                                          ; lpm_abs_i0a                     ; work         ;
+;       |LowPassFilter:lowpass|                                                  ; 3336 (128)        ; 64 (64)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|LowPassFilter:lowpass                                                                                                                                                                                         ; LowPassFilter                   ; work         ;
 ;          |lpm_divide:Div0|                                                     ; 1604 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|LowPassFilter:lowpass|lpm_divide:Div0                                                                                                                                                                         ; lpm_divide                      ; work         ;
 ;             |lpm_divide_92p:auto_generated|                                    ; 1604 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|LowPassFilter:lowpass|lpm_divide:Div0|lpm_divide_92p:auto_generated                                                                                                                                           ; lpm_divide_92p                  ; work         ;
 ;                |abs_divider_4dg:divider|                                       ; 1604 (62)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|LowPassFilter:lowpass|lpm_divide:Div0|lpm_divide_92p:auto_generated|abs_divider_4dg:divider                                                                                                                   ; abs_divider_4dg                 ; work         ;
 ;                   |alt_u_div_6af:divider|                                      ; 1502 (1502)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|LowPassFilter:lowpass|lpm_divide:Div0|lpm_divide_92p:auto_generated|abs_divider_4dg:divider|alt_u_div_6af:divider                                                                                             ; alt_u_div_6af                   ; work         ;
 ;                   |lpm_abs_i0a:my_abs_num|                                     ; 40 (40)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|LowPassFilter:lowpass|lpm_divide:Div0|lpm_divide_92p:auto_generated|abs_divider_4dg:divider|lpm_abs_i0a:my_abs_num                                                                                            ; lpm_abs_i0a                     ; work         ;
-;          |lpm_divide:Div1|                                                     ; 1603 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|LowPassFilter:lowpass|lpm_divide:Div1                                                                                                                                                                         ; lpm_divide                      ; work         ;
-;             |lpm_divide_92p:auto_generated|                                    ; 1603 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|LowPassFilter:lowpass|lpm_divide:Div1|lpm_divide_92p:auto_generated                                                                                                                                           ; lpm_divide_92p                  ; work         ;
-;                |abs_divider_4dg:divider|                                       ; 1603 (62)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|LowPassFilter:lowpass|lpm_divide:Div1|lpm_divide_92p:auto_generated|abs_divider_4dg:divider                                                                                                                   ; abs_divider_4dg                 ; work         ;
+;          |lpm_divide:Div1|                                                     ; 1604 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|LowPassFilter:lowpass|lpm_divide:Div1                                                                                                                                                                         ; lpm_divide                      ; work         ;
+;             |lpm_divide_92p:auto_generated|                                    ; 1604 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|LowPassFilter:lowpass|lpm_divide:Div1|lpm_divide_92p:auto_generated                                                                                                                                           ; lpm_divide_92p                  ; work         ;
+;                |abs_divider_4dg:divider|                                       ; 1604 (62)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|LowPassFilter:lowpass|lpm_divide:Div1|lpm_divide_92p:auto_generated|abs_divider_4dg:divider                                                                                                                   ; abs_divider_4dg                 ; work         ;
 ;                   |alt_u_div_6af:divider|                                      ; 1502 (1502)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|LowPassFilter:lowpass|lpm_divide:Div1|lpm_divide_92p:auto_generated|abs_divider_4dg:divider|alt_u_div_6af:divider                                                                                             ; alt_u_div_6af                   ; work         ;
-;                   |lpm_abs_i0a:my_abs_num|                                     ; 39 (39)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|LowPassFilter:lowpass|lpm_divide:Div1|lpm_divide_92p:auto_generated|abs_divider_4dg:divider|lpm_abs_i0a:my_abs_num                                                                                            ; lpm_abs_i0a                     ; work         ;
+;                   |lpm_abs_i0a:my_abs_num|                                     ; 40 (40)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AllFilters:filters|LowPassFilter:lowpass|lpm_divide:Div1|lpm_divide_92p:auto_generated|abs_divider_4dg:divider|lpm_abs_i0a:my_abs_num                                                                                            ; lpm_abs_i0a                     ; work         ;
 ;    |AudioVolume:volume|                                                        ; 935 (65)          ; 66 (66)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AudioVolume:volume                                                                                                                                                                                                               ; AudioVolume                     ; work         ;
 ;       |lpm_divide:Div0|                                                        ; 435 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AudioVolume:volume|lpm_divide:Div0                                                                                                                                                                                               ; lpm_divide                      ; work         ;
 ;          |lpm_divide_n0p:auto_generated|                                       ; 435 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|AudioVolume:volume|lpm_divide:Div0|lpm_divide_n0p:auto_generated                                                                                                                                                                 ; lpm_divide_n0p                  ; work         ;
@@ -419,6 +419,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;       |I2C_Controller:u0|                                                      ; 49 (49)           ; 30 (30)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|avconf:avc|I2C_Controller:u0                                                                                                                                                                                                     ; I2C_Controller                  ; work         ;
 ;    |hex_display:h1|                                                            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|hex_display:h1                                                                                                                                                                                                                   ; hex_display                     ; work         ;
 ;    |hex_display:h6|                                                            ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|hex_display:h6                                                                                                                                                                                                                   ; hex_display                     ; work         ;
+;    |hex_display:h7|                                                            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|hex_display:h7                                                                                                                                                                                                                   ; hex_display                     ; work         ;
 ;    |loop:l0|                                                                   ; 492 (492)         ; 314 (314)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|loop:l0                                                                                                                                                                                                                          ; loop                            ; work         ;
 ;    |lpm_divide:Div0|                                                           ; 241 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|lpm_divide:Div0                                                                                                                                                                                                                  ; lpm_divide                      ; work         ;
 ;       |lpm_divide_okm:auto_generated|                                          ; 241 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Project2|lpm_divide:Div0|lpm_divide_okm:auto_generated                                                                                                                                                                                    ; lpm_divide_okm                  ; work         ;
@@ -693,8 +694,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; 4:1                ; 62 bits   ; 124 LEs       ; 124 LEs              ; 0 LEs                  ; Yes        ; |Project2|AudioVolume:volume|left_channel_audio_out[17]                                                                                                            ;
 ; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |Project2|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|data_in_shift_reg[5]                                             ;
 ; 8:1                ; 32 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; Yes        ; |Project2|loop:l0|writedata[17]                                                                                                                                    ;
-; 5:1                ; 32 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; Yes        ; |Project2|CutOffCutOnRepeat:cccor|left_channel_audio_out[8]                                                                                                        ;
-; 5:1                ; 32 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; Yes        ; |Project2|CutOffCutOnRepeat:cccor|right_channel_audio_out[19]                                                                                                      ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; Yes        ; |Project2|CutOffCutOnRepeat:cccor|left_channel_audio_out[9]                                                                                                        ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; Yes        ; |Project2|CutOffCutOnRepeat:cccor|right_channel_audio_out[18]                                                                                                      ;
 ; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |Project2|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter|bit_counter[4] ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Project2|system:u0|system_sdram:sdram|m_dqm[3]                                                                                                                    ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 0 LEs                ; 8 LEs                  ; Yes        ; |Project2|system:u0|system_sdram:sdram|system_sdram_input_efifo_module:the_system_sdram_input_efifo_module|entries[1]                                              ;
@@ -2086,15 +2087,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "hex_display:h7"                                                                                                                                                                        ;
-+----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                                                                                                                            ;
-+----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; IN       ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; IN[3..0] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; OUT      ; Output ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (7 bits) it drives; bit(s) "OUT[7..7]" have no fanouts                                                             ;
-+----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "hex_display:h7"                                                                                                                            ;
++------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                    ;
++------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------+
+; IN   ; Input  ; Warning  ; Input port expression (2 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "IN[3..2]" will be connected to GND. ;
+; OUT  ; Output ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (7 bits) it drives; bit(s) "OUT[7..7]" have no fanouts                     ;
++------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -2116,16 +2116,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SCLR SLD          ; 62                          ;
 ;     plain             ; 120                         ;
 ; cycloneiii_io_obuf    ; 36                          ;
-; cycloneiii_lcell_comb ; 11095                       ;
+; cycloneiii_lcell_comb ; 11108                       ;
 ;     arith             ; 3734                        ;
 ;         1 data inputs ; 6                           ;
 ;         2 data inputs ; 488                         ;
 ;         3 data inputs ; 3240                        ;
-;     normal            ; 7361                        ;
+;     normal            ; 7374                        ;
 ;         0 data inputs ; 221                         ;
-;         1 data inputs ; 35                          ;
-;         2 data inputs ; 2997                        ;
-;         3 data inputs ; 731                         ;
+;         1 data inputs ; 37                          ;
+;         2 data inputs ; 3007                        ;
+;         3 data inputs ; 732                         ;
 ;         4 data inputs ; 3377                        ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 128                         ;
@@ -2150,25 +2150,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Fri Mar 29 16:58:40 2019
+    Info: Processing started: Fri Mar 29 17:27:13 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Project2 -c Project2
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12248): Elaborating Qsys system entity "system.qsys"
-Info (12250): 2019.03.29.16:58:52 Progress: Loading LoopBoard/system.qsys
-Info (12250): 2019.03.29.16:58:53 Progress: Reading input file
-Info (12250): 2019.03.29.16:58:53 Progress: Adding clk [clock_source 16.1]
+Info (12250): 2019.03.29.17:27:25 Progress: Loading LoopBoard/system.qsys
+Info (12250): 2019.03.29.17:27:25 Progress: Reading input file
+Info (12250): 2019.03.29.17:27:25 Progress: Adding clk [clock_source 16.1]
 Warning (12251): Clk: Used clock_source 16.0 (instead of 16.1)
-Info (12250): 2019.03.29.16:58:54 Progress: Parameterizing module clk
-Info (12250): 2019.03.29.16:58:54 Progress: Adding sdram [altera_avalon_new_sdram_controller 16.1]
+Info (12250): 2019.03.29.17:27:26 Progress: Parameterizing module clk
+Info (12250): 2019.03.29.17:27:26 Progress: Adding sdram [altera_avalon_new_sdram_controller 16.1]
 Warning (12251): Sdram: Used altera_avalon_new_sdram_controller 16.0 (instead of 16.1)
-Info (12250): 2019.03.29.16:58:54 Progress: Parameterizing module sdram
-Info (12250): 2019.03.29.16:58:54 Progress: Building connections
-Info (12250): 2019.03.29.16:58:54 Progress: Parameterizing connections
-Info (12250): 2019.03.29.16:58:54 Progress: Validating
-Info (12250): 2019.03.29.16:58:55 Progress: Done reading input file
+Info (12250): 2019.03.29.17:27:26 Progress: Parameterizing module sdram
+Info (12250): 2019.03.29.17:27:26 Progress: Building connections
+Info (12250): 2019.03.29.17:27:26 Progress: Parameterizing connections
+Info (12250): 2019.03.29.17:27:26 Progress: Validating
+Info (12250): 2019.03.29.17:27:27 Progress: Done reading input file
 Info (12250): System: Generating system "system" for QUARTUS_SYNTH
 Info (12250): Sdram: Starting RTL generation for module 'system_sdram'
-Info (12250): Sdram:   Generation command is [exec /usr/local/cms/altera_lite/16.0/quartus/linux64/perl/bin/perl -I /usr/local/cms/altera_lite/16.0/quartus/linux64/perl/lib -I /usr/local/cms/altera_lite/16.0/quartus/sopc_builder/bin/europa -I /usr/local/cms/altera_lite/16.0/quartus/sopc_builder/bin/perl_lib -I /usr/local/cms/altera_lite/16.0/quartus/sopc_builder/bin -I /usr/local/cms/altera_lite/16.0/quartus/../ip/altera/sopc_builder_ip/common -I /usr/local/cms/altera_lite/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- /usr/local/cms/altera_lite/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=system_sdram --dir=/tmp/alt7984_7088675056043010593.dir/0001_sdram_gen/ --quartus_dir=/usr/local/cms/altera_lite/16.0/quartus --verilog --config=/tmp/alt7984_7088675056043010593.dir/0001_sdram_gen//system_sdram_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Sdram:   Generation command is [exec /usr/local/cms/altera_lite/16.0/quartus/linux64/perl/bin/perl -I /usr/local/cms/altera_lite/16.0/quartus/linux64/perl/lib -I /usr/local/cms/altera_lite/16.0/quartus/sopc_builder/bin/europa -I /usr/local/cms/altera_lite/16.0/quartus/sopc_builder/bin/perl_lib -I /usr/local/cms/altera_lite/16.0/quartus/sopc_builder/bin -I /usr/local/cms/altera_lite/16.0/quartus/../ip/altera/sopc_builder_ip/common -I /usr/local/cms/altera_lite/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- /usr/local/cms/altera_lite/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=system_sdram --dir=/tmp/alt7984_2560395761640148513.dir/0001_sdram_gen/ --quartus_dir=/usr/local/cms/altera_lite/16.0/quartus --verilog --config=/tmp/alt7984_2560395761640148513.dir/0001_sdram_gen//system_sdram_component_configuration.pl  --do_build_sim=0  ]
 Info (12250): Sdram: Done RTL generation for module 'system_sdram'
 Info (12250): Sdram: "system" instantiated altera_avalon_new_sdram_controller "sdram"
 Info (12250): Rst_controller: "system" instantiated altera_reset_controller "rst_controller"
@@ -2217,7 +2217,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file loop.v
     Info (12023): Found entity 1: loop File: /cmshome/tangalvi/LoopBoard/loop.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file hex_display.v
     Info (12023): Found entity 1: hex_display File: /cmshome/tangalvi/LoopBoard/hex_display.v Line: 1
-Warning (10275): Verilog HDL Module Instantiation warning at Project2.v(272): ignored dangling comma in List of Port Connections File: /cmshome/tangalvi/LoopBoard/Project2.v Line: 272
+Warning (10275): Verilog HDL Module Instantiation warning at Project2.v(274): ignored dangling comma in List of Port Connections File: /cmshome/tangalvi/LoopBoard/Project2.v Line: 274
 Info (12021): Found 1 design units, including 1 entities, in source file Project2.v
     Info (12023): Found entity 1: Project2 File: /cmshome/tangalvi/LoopBoard/Project2.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/system/submodules/altera_reset_controller.v
@@ -2243,23 +2243,23 @@ Warning (10037): Verilog HDL or VHDL warning at system_sdram.v(336): conditional
 Warning (10037): Verilog HDL or VHDL warning at system_sdram.v(680): conditional expression evaluates to a constant File: /cmshome/tangalvi/LoopBoard/db/ip/system/submodules/system_sdram.v Line: 680
 Info (12127): Elaborating entity "Project2" for the top level hierarchy
 Warning (10034): Output port "LEDR[17..4]" at Project2.v(89) has no driver File: /cmshome/tangalvi/LoopBoard/Project2.v Line: 89
-Info (12128): Elaborating entity "hex_display" for hierarchy "hex_display:h7" File: /cmshome/tangalvi/LoopBoard/Project2.v Line: 154
-Info (12128): Elaborating entity "AllFilters" for hierarchy "AllFilters:filters" File: /cmshome/tangalvi/LoopBoard/Project2.v Line: 174
-Info (12128): Elaborating entity "LowPassFilter" for hierarchy "AllFilters:filters|LowPassFilter:lowpass" File: /cmshome/tangalvi/LoopBoard/Filters/All.v Line: 73
-Info (12128): Elaborating entity "HighPassFilter" for hierarchy "AllFilters:filters|HighPassFilter:highpass" File: /cmshome/tangalvi/LoopBoard/Filters/All.v Line: 83
-Info (12128): Elaborating entity "BandPassFilter" for hierarchy "AllFilters:filters|BandPassFilter:bandpass" File: /cmshome/tangalvi/LoopBoard/Filters/All.v Line: 93
-Info (12128): Elaborating entity "CutOffCutOnRepeat" for hierarchy "CutOffCutOnRepeat:cccor" File: /cmshome/tangalvi/LoopBoard/Project2.v Line: 184
-Info (12128): Elaborating entity "AudioVolume" for hierarchy "AudioVolume:volume" File: /cmshome/tangalvi/LoopBoard/Project2.v Line: 195
-Info (12128): Elaborating entity "loop" for hierarchy "loop:l0" File: /cmshome/tangalvi/LoopBoard/Project2.v Line: 213
+Info (12128): Elaborating entity "hex_display" for hierarchy "hex_display:h7" File: /cmshome/tangalvi/LoopBoard/Project2.v Line: 155
+Info (12128): Elaborating entity "AllFilters" for hierarchy "AllFilters:filters" File: /cmshome/tangalvi/LoopBoard/Project2.v Line: 176
+Info (12128): Elaborating entity "LowPassFilter" for hierarchy "AllFilters:filters|LowPassFilter:lowpass" File: /cmshome/tangalvi/LoopBoard/Filters/All.v Line: 79
+Info (12128): Elaborating entity "HighPassFilter" for hierarchy "AllFilters:filters|HighPassFilter:highpass" File: /cmshome/tangalvi/LoopBoard/Filters/All.v Line: 89
+Info (12128): Elaborating entity "BandPassFilter" for hierarchy "AllFilters:filters|BandPassFilter:bandpass" File: /cmshome/tangalvi/LoopBoard/Filters/All.v Line: 99
+Info (12128): Elaborating entity "CutOffCutOnRepeat" for hierarchy "CutOffCutOnRepeat:cccor" File: /cmshome/tangalvi/LoopBoard/Project2.v Line: 186
+Info (12128): Elaborating entity "AudioVolume" for hierarchy "AudioVolume:volume" File: /cmshome/tangalvi/LoopBoard/Project2.v Line: 197
+Info (12128): Elaborating entity "loop" for hierarchy "loop:l0" File: /cmshome/tangalvi/LoopBoard/Project2.v Line: 215
 Warning (10230): Verilog HDL assignment warning at loop.v(54): truncated value with size 32 to match size of target (25) File: /cmshome/tangalvi/LoopBoard/loop.v Line: 54
 Warning (10230): Verilog HDL assignment warning at loop.v(68): truncated value with size 32 to match size of target (3) File: /cmshome/tangalvi/LoopBoard/loop.v Line: 68
-Info (12128): Elaborating entity "system" for hierarchy "system:u0" File: /cmshome/tangalvi/LoopBoard/Project2.v Line: 237
+Info (12128): Elaborating entity "system" for hierarchy "system:u0" File: /cmshome/tangalvi/LoopBoard/Project2.v Line: 239
 Info (12128): Elaborating entity "system_sdram" for hierarchy "system:u0|system_sdram:sdram" File: /cmshome/tangalvi/LoopBoard/system/synthesis/system.v Line: 52
 Info (12128): Elaborating entity "system_sdram_input_efifo_module" for hierarchy "system:u0|system_sdram:sdram|system_sdram_input_efifo_module:the_system_sdram_input_efifo_module" File: /cmshome/tangalvi/LoopBoard/system/synthesis/submodules/system_sdram.v Line: 298
 Info (12128): Elaborating entity "altera_reset_controller" for hierarchy "system:u0|altera_reset_controller:rst_controller" File: /cmshome/tangalvi/LoopBoard/system/synthesis/system.v Line: 115
 Info (12128): Elaborating entity "altera_reset_synchronizer" for hierarchy "system:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1" File: /cmshome/tangalvi/LoopBoard/system/synthesis/submodules/altera_reset_controller.v Line: 208
 Info (12128): Elaborating entity "altera_reset_synchronizer" for hierarchy "system:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1" File: /cmshome/tangalvi/LoopBoard/system/synthesis/submodules/altera_reset_controller.v Line: 220
-Info (12128): Elaborating entity "Audio_Controller" for hierarchy "Audio_Controller:Audio_Controller" File: /cmshome/tangalvi/LoopBoard/Project2.v Line: 272
+Info (12128): Elaborating entity "Audio_Controller" for hierarchy "Audio_Controller:Audio_Controller" File: /cmshome/tangalvi/LoopBoard/Project2.v Line: 274
 Info (12128): Elaborating entity "Altera_UP_Clock_Edge" for hierarchy "Audio_Controller:Audio_Controller|Altera_UP_Clock_Edge:Bit_Clock_Edges" File: /cmshome/tangalvi/LoopBoard/Audio_Controller/Audio_Controller.v Line: 182
 Info (12128): Elaborating entity "Altera_UP_Audio_In_Deserializer" for hierarchy "Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer" File: /cmshome/tangalvi/LoopBoard/Audio_Controller/Audio_Controller.v Line: 237
 Info (12128): Elaborating entity "Altera_UP_Audio_Bit_Counter" for hierarchy "Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter" File: /cmshome/tangalvi/LoopBoard/Audio_Controller/Altera_UP_Audio_In_Deserializer.v Line: 159
@@ -2358,7 +2358,7 @@ Info (12133): Instantiated megafunction "Audio_Controller:Audio_Controller|Audio
     Info (12134): Parameter "port_extclk2" = "PORT_UNUSED"
     Info (12134): Parameter "port_extclk3" = "PORT_UNUSED"
     Info (12134): Parameter "valid_lock_multiplier" = "1"
-Info (12128): Elaborating entity "avconf" for hierarchy "avconf:avc" File: /cmshome/tangalvi/LoopBoard/Project2.v Line: 280
+Info (12128): Elaborating entity "avconf" for hierarchy "avconf:avc" File: /cmshome/tangalvi/LoopBoard/Project2.v Line: 282
 Warning (10230): Verilog HDL assignment warning at avconf.v(68): truncated value with size 32 to match size of target (16) File: /cmshome/tangalvi/LoopBoard/avconf/avconf.v Line: 68
 Warning (10230): Verilog HDL assignment warning at avconf.v(119): truncated value with size 32 to match size of target (6) File: /cmshome/tangalvi/LoopBoard/avconf/avconf.v Line: 119
 Warning (10230): Verilog HDL assignment warning at avconf.v(136): truncated value with size 32 to match size of target (16) File: /cmshome/tangalvi/LoopBoard/avconf/avconf.v Line: 136
@@ -2385,7 +2385,7 @@ Warning (10230): Verilog HDL assignment warning at I2C_Controller.v(78): truncat
 Warning (10230): Verilog HDL assignment warning at I2C_Controller.v(77): truncated value with size 32 to match size of target (1) File: /cmshome/tangalvi/LoopBoard/avconf/I2C_Controller.v Line: 77
 Warning (10230): Verilog HDL assignment warning at I2C_Controller.v(90): truncated value with size 32 to match size of target (6) File: /cmshome/tangalvi/LoopBoard/avconf/I2C_Controller.v Line: 90
 Info (278001): Inferred 9 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: /cmshome/tangalvi/LoopBoard/Project2.v Line: 161
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: /cmshome/tangalvi/LoopBoard/Project2.v Line: 162
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "AudioVolume:volume|Div1" File: /cmshome/tangalvi/LoopBoard/Volume/Volume.v Line: 36
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "AudioVolume:volume|Div0" File: /cmshome/tangalvi/LoopBoard/Volume/Volume.v Line: 35
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "AllFilters:filters|HighPassFilter:highpass|Div1" File: /cmshome/tangalvi/LoopBoard/Filters/HighPass.v Line: 34
@@ -2394,8 +2394,8 @@ Info (278001): Inferred 9 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "AllFilters:filters|BandPassFilter:bandpass|LowPassFilter:lowpass|Div1" File: /cmshome/tangalvi/LoopBoard/Filters/LowPass.v Line: 33
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "AllFilters:filters|LowPassFilter:lowpass|Div0" File: /cmshome/tangalvi/LoopBoard/Filters/LowPass.v Line: 32
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "AllFilters:filters|BandPassFilter:bandpass|HighPassFilter:highpass|Div1" File: /cmshome/tangalvi/LoopBoard/Filters/HighPass.v Line: 34
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: /cmshome/tangalvi/LoopBoard/Project2.v Line: 161
-Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: /cmshome/tangalvi/LoopBoard/Project2.v Line: 161
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: /cmshome/tangalvi/LoopBoard/Project2.v Line: 162
+Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: /cmshome/tangalvi/LoopBoard/Project2.v Line: 162
     Info (12134): Parameter "LPM_WIDTHN" = "25"
     Info (12134): Parameter "LPM_WIDTHD" = "19"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -2521,13 +2521,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX6[4]" is stuck at GND File: /cmshome/tangalvi/LoopBoard/Project2.v Line: 86
     Warning (13410): Pin "HEX6[5]" is stuck at GND File: /cmshome/tangalvi/LoopBoard/Project2.v Line: 86
     Warning (13410): Pin "HEX6[6]" is stuck at VCC File: /cmshome/tangalvi/LoopBoard/Project2.v Line: 86
-    Warning (13410): Pin "HEX7[0]" is stuck at GND File: /cmshome/tangalvi/LoopBoard/Project2.v Line: 87
     Warning (13410): Pin "HEX7[1]" is stuck at GND File: /cmshome/tangalvi/LoopBoard/Project2.v Line: 87
-    Warning (13410): Pin "HEX7[2]" is stuck at GND File: /cmshome/tangalvi/LoopBoard/Project2.v Line: 87
-    Warning (13410): Pin "HEX7[3]" is stuck at GND File: /cmshome/tangalvi/LoopBoard/Project2.v Line: 87
-    Warning (13410): Pin "HEX7[4]" is stuck at GND File: /cmshome/tangalvi/LoopBoard/Project2.v Line: 87
-    Warning (13410): Pin "HEX7[5]" is stuck at GND File: /cmshome/tangalvi/LoopBoard/Project2.v Line: 87
-    Warning (13410): Pin "HEX7[6]" is stuck at VCC File: /cmshome/tangalvi/LoopBoard/Project2.v Line: 87
     Warning (13410): Pin "LEDR[4]" is stuck at GND File: /cmshome/tangalvi/LoopBoard/Project2.v Line: 89
     Warning (13410): Pin "LEDR[5]" is stuck at GND File: /cmshome/tangalvi/LoopBoard/Project2.v Line: 89
     Warning (13410): Pin "LEDR[6]" is stuck at GND File: /cmshome/tangalvi/LoopBoard/Project2.v Line: 89
@@ -2563,18 +2557,18 @@ Warning (21074): Design contains 10 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[13]" File: /cmshome/tangalvi/LoopBoard/Project2.v Line: 66
     Warning (15610): No output dependent on input pin "SW[14]" File: /cmshome/tangalvi/LoopBoard/Project2.v Line: 66
     Warning (15610): No output dependent on input pin "SW[15]" File: /cmshome/tangalvi/LoopBoard/Project2.v Line: 66
-Info (21057): Implemented 12120 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 12131 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 25 input pins
     Info (21059): Implemented 102 output pins
     Info (21060): Implemented 36 bidirectional pins
-    Info (21061): Implemented 11828 logic cells
+    Info (21061): Implemented 11839 logic cells
     Info (21064): Implemented 128 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 134 warnings
-    Info: Peak virtual memory: 1352 megabytes
-    Info: Processing ended: Fri Mar 29 16:59:21 2019
-    Info: Elapsed time: 00:00:41
-    Info: Total CPU time (on all processors): 00:00:56
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 128 warnings
+    Info: Peak virtual memory: 1350 megabytes
+    Info: Processing ended: Fri Mar 29 17:27:51 2019
+    Info: Elapsed time: 00:00:38
+    Info: Total CPU time (on all processors): 00:00:55
 
 
 +------------------------------------------+

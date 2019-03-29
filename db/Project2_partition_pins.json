@@ -60,6 +60,30 @@
 					"strict" : false
 				},
 				{
+					"name" : "HEX7[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX7[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX7[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX7[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX7[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX7[6]",
+					"strict" : false
+				},
+				{
 					"name" : "I2C_SCLK",
 					"strict" : false
 				},
@@ -300,6 +324,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "SW[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[6]",
+					"strict" : false
+				},
+				{
 					"name" : "KEY[3]",
 					"strict" : false
 				},
@@ -337,14 +369,6 @@
 				},
 				{
 					"name" : "SW[11]",
-					"strict" : false
-				},
-				{
-					"name" : "SW[6]",
-					"strict" : false
-				},
-				{
-					"name" : "SW[5]",
 					"strict" : false
 				},
 				{

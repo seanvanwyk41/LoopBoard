@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deploy
- date="2019.03.29.16:58:57"
+ date="2019.03.29.17:27:28"
  outputDirectory="/cmshome/tangalvi/LoopBoard/db/ip/system/">
  <perimeter>
   <parameter
@@ -138,13 +138,13 @@
  </perimeter>
  <entity
    path=""
-   parameterizationKey="system:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=EP4CE115F29C7,AUTO_DEVICE_FAMILY=Cyclone IV E,AUTO_DEVICE_SPEEDGRADE=7,AUTO_GENERATION_ID=1553893135,AUTO_UNIQUE_ID=(clock_source:16.0:clockFrequency=50000000,clockFrequencyKnown=true,inputClockFrequency=0,resetSynchronousEdges=NONE)(altera_avalon_new_sdram_controller:16.0:TAC=5.5,TMRD=3,TRCD=20.0,TRFC=70.0,TRP=20.0,TWR=14.0,addressWidth=25,bankWidth=2,casLatency=3,clockRate=50000000,columnWidth=10,componentName=system_sdram,dataWidth=32,generateSimulationModel=false,initNOPDelay=0.0,initRefreshCommands=2,masteredTristateBridgeSlave=0,model=single_Micron_MT48LC4M32B2_7_chip,numberOfBanks=4,numberOfChipSelects=1,pinsSharedViaTriState=false,powerUpDelay=100.0,refreshPeriod=15.625,registerDataIn=true,rowWidth=13,size=134217728)(clock:16.0:)(reset:16.0:)"
+   parameterizationKey="system:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=EP4CE115F29C7,AUTO_DEVICE_FAMILY=Cyclone IV E,AUTO_DEVICE_SPEEDGRADE=7,AUTO_GENERATION_ID=1553894847,AUTO_UNIQUE_ID=(clock_source:16.0:clockFrequency=50000000,clockFrequencyKnown=true,inputClockFrequency=0,resetSynchronousEdges=NONE)(altera_avalon_new_sdram_controller:16.0:TAC=5.5,TMRD=3,TRCD=20.0,TRFC=70.0,TRP=20.0,TWR=14.0,addressWidth=25,bankWidth=2,casLatency=3,clockRate=50000000,columnWidth=10,componentName=system_sdram,dataWidth=32,generateSimulationModel=false,initNOPDelay=0.0,initRefreshCommands=2,masteredTristateBridgeSlave=0,model=single_Micron_MT48LC4M32B2_7_chip,numberOfBanks=4,numberOfChipSelects=1,pinsSharedViaTriState=false,powerUpDelay=100.0,refreshPeriod=15.625,registerDataIn=true,rowWidth=13,size=134217728)(clock:16.0:)(reset:16.0:)"
    instancePathKey="system"
    kind="system"
    version="1.0"
    name="system">
   <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
-  <parameter name="AUTO_GENERATION_ID" value="1553893135" />
+  <parameter name="AUTO_GENERATION_ID" value="1553894847" />
   <parameter name="AUTO_DEVICE" value="EP4CE115F29C7" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
   <parameter name="AUTO_CLK_RESET_DOMAIN" value="-1" />
@@ -205,7 +205,7 @@
    <message level="Debug" culprit="system"><![CDATA["<b>system</b>" reuses <b>altera_reset_controller</b> "<b>submodules/altera_reset_controller</b>"]]></message>
    <message level="Debug" culprit="system">queue size: 1 starting:altera_avalon_new_sdram_controller "submodules/system_sdram"</message>
    <message level="Info" culprit="sdram">Starting RTL generation for module 'system_sdram'</message>
-   <message level="Info" culprit="sdram">  Generation command is [exec /usr/local/cms/altera_lite/16.0/quartus/linux64/perl/bin/perl -I /usr/local/cms/altera_lite/16.0/quartus/linux64/perl/lib -I /usr/local/cms/altera_lite/16.0/quartus/sopc_builder/bin/europa -I /usr/local/cms/altera_lite/16.0/quartus/sopc_builder/bin/perl_lib -I /usr/local/cms/altera_lite/16.0/quartus/sopc_builder/bin -I /usr/local/cms/altera_lite/16.0/quartus/../ip/altera/sopc_builder_ip/common -I /usr/local/cms/altera_lite/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- /usr/local/cms/altera_lite/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=system_sdram --dir=/tmp/alt7984_7088675056043010593.dir/0001_sdram_gen/ --quartus_dir=/usr/local/cms/altera_lite/16.0/quartus --verilog --config=/tmp/alt7984_7088675056043010593.dir/0001_sdram_gen//system_sdram_component_configuration.pl  --do_build_sim=0  ]</message>
+   <message level="Info" culprit="sdram">  Generation command is [exec /usr/local/cms/altera_lite/16.0/quartus/linux64/perl/bin/perl -I /usr/local/cms/altera_lite/16.0/quartus/linux64/perl/lib -I /usr/local/cms/altera_lite/16.0/quartus/sopc_builder/bin/europa -I /usr/local/cms/altera_lite/16.0/quartus/sopc_builder/bin/perl_lib -I /usr/local/cms/altera_lite/16.0/quartus/sopc_builder/bin -I /usr/local/cms/altera_lite/16.0/quartus/../ip/altera/sopc_builder_ip/common -I /usr/local/cms/altera_lite/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- /usr/local/cms/altera_lite/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=system_sdram --dir=/tmp/alt7984_2560395761640148513.dir/0001_sdram_gen/ --quartus_dir=/usr/local/cms/altera_lite/16.0/quartus --verilog --config=/tmp/alt7984_2560395761640148513.dir/0001_sdram_gen//system_sdram_component_configuration.pl  --do_build_sim=0  ]</message>
    <message level="Info" culprit="sdram">Done RTL generation for module 'system_sdram'</message>
    <message level="Info" culprit="sdram"><![CDATA["<b>system</b>" instantiated <b>altera_avalon_new_sdram_controller</b> "<b>sdram</b>"]]></message>
    <message level="Debug" culprit="system">queue size: 0 starting:altera_reset_controller "submodules/altera_reset_controller"</message>
@@ -260,7 +260,7 @@
   <messages>
    <message level="Debug" culprit="system">queue size: 1 starting:altera_avalon_new_sdram_controller "submodules/system_sdram"</message>
    <message level="Info" culprit="sdram">Starting RTL generation for module 'system_sdram'</message>
-   <message level="Info" culprit="sdram">  Generation command is [exec /usr/local/cms/altera_lite/16.0/quartus/linux64/perl/bin/perl -I /usr/local/cms/altera_lite/16.0/quartus/linux64/perl/lib -I /usr/local/cms/altera_lite/16.0/quartus/sopc_builder/bin/europa -I /usr/local/cms/altera_lite/16.0/quartus/sopc_builder/bin/perl_lib -I /usr/local/cms/altera_lite/16.0/quartus/sopc_builder/bin -I /usr/local/cms/altera_lite/16.0/quartus/../ip/altera/sopc_builder_ip/common -I /usr/local/cms/altera_lite/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- /usr/local/cms/altera_lite/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=system_sdram --dir=/tmp/alt7984_7088675056043010593.dir/0001_sdram_gen/ --quartus_dir=/usr/local/cms/altera_lite/16.0/quartus --verilog --config=/tmp/alt7984_7088675056043010593.dir/0001_sdram_gen//system_sdram_component_configuration.pl  --do_build_sim=0  ]</message>
+   <message level="Info" culprit="sdram">  Generation command is [exec /usr/local/cms/altera_lite/16.0/quartus/linux64/perl/bin/perl -I /usr/local/cms/altera_lite/16.0/quartus/linux64/perl/lib -I /usr/local/cms/altera_lite/16.0/quartus/sopc_builder/bin/europa -I /usr/local/cms/altera_lite/16.0/quartus/sopc_builder/bin/perl_lib -I /usr/local/cms/altera_lite/16.0/quartus/sopc_builder/bin -I /usr/local/cms/altera_lite/16.0/quartus/../ip/altera/sopc_builder_ip/common -I /usr/local/cms/altera_lite/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- /usr/local/cms/altera_lite/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=system_sdram --dir=/tmp/alt7984_2560395761640148513.dir/0001_sdram_gen/ --quartus_dir=/usr/local/cms/altera_lite/16.0/quartus --verilog --config=/tmp/alt7984_2560395761640148513.dir/0001_sdram_gen//system_sdram_component_configuration.pl  --do_build_sim=0  ]</message>
    <message level="Info" culprit="sdram">Done RTL generation for module 'system_sdram'</message>
    <message level="Info" culprit="sdram"><![CDATA["<b>system</b>" instantiated <b>altera_avalon_new_sdram_controller</b> "<b>sdram</b>"]]></message>
   </messages>

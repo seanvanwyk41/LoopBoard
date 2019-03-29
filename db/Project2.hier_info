@@ -417,6 +417,7 @@ filter_choice[0] => Mux60.IN2
 filter_choice[0] => Mux61.IN2
 filter_choice[0] => Mux62.IN2
 filter_choice[0] => Mux63.IN2
+filter_choice[0] => choice_display[0].DATAIN
 filter_choice[1] => Mux0.IN2
 filter_choice[1] => Mux1.IN2
 filter_choice[1] => Mux2.IN2
@@ -481,6 +482,7 @@ filter_choice[1] => Mux60.IN1
 filter_choice[1] => Mux61.IN1
 filter_choice[1] => Mux62.IN1
 filter_choice[1] => Mux63.IN1
+filter_choice[1] => choice_display[1].DATAIN
 reset => reset.IN3
 AUD_BCLK <> LowPassFilter:lowpass.AUD_BCLK
 AUD_BCLK <> HighPassFilter:highpass.AUD_BCLK
@@ -553,6 +555,8 @@ right_channel_audio_out[28] <= Mux35.DB_MAX_OUTPUT_PORT_TYPE
 right_channel_audio_out[29] <= Mux34.DB_MAX_OUTPUT_PORT_TYPE
 right_channel_audio_out[30] <= Mux33.DB_MAX_OUTPUT_PORT_TYPE
 right_channel_audio_out[31] <= Mux32.DB_MAX_OUTPUT_PORT_TYPE
+choice_display[0] <= filter_choice[0].DB_MAX_OUTPUT_PORT_TYPE
+choice_display[1] <= filter_choice[1].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Project2|AllFilters:filters|LowPassFilter:lowpass

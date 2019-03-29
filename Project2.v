@@ -148,10 +148,11 @@ wire [31:0] right_audio_filters_out;
 wire [31:0] left_audio_volume_out;
 wire [31:0] right_audio_volume_out;
 wire [1:0] volume_display;
+wire [1:0] choice_display;
 
 
 // hex display settings
-hex_display h7(0,HEX7);
+hex_display h7(choice_display,HEX7);
 hex_display h0(0,HEX6);
 hex_display h6(volume_display,HEX5);
 hex_display h5(0,HEX4);
@@ -170,7 +171,8 @@ AllFilters filters(
 	.AUD_ADCLRCK(AUD_ADCLRCK),
 	.AUD_DACLRCK(AUD_DACLRCK),
 	.left_channel_audio_out(left_audio_filters_out),
-	.right_channel_audio_out(right_audio_filters_out)
+	.right_channel_audio_out(right_audio_filters_out),
+	.choice_display(choice_display)
 );
 
 // Cutoff controller 
