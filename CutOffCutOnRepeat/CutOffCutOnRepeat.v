@@ -1,0 +1,79 @@
+// Repeats the pattern of cutting off and cutting on music every (interval_time) in seconds
+module CutOffCutOnRepeat(
+	// Inputs
+	left_channel_audio_in,
+	right_channel_audio_in,
+	interval_time, // in seconds
+	CLOCK_50,
+	
+	// Outputs
+	left_channel_audio_out,
+	right_channel_audio_out
+);
+
+// Inputs
+input [31:0] left_channel_audio_in;
+input [31:0] right_channel_audio_in;
+input [1:0] interval_time;
+input CLOCK_50;
+
+// Outputs
+output reg [31:0] left_channel_audio_out;
+output reg [31:0] right_channel_audio_out;
+
+// Counter
+reg [25:0] mhz_counter = 26'b0;
+reg [1:0] second_counter = 2'b00;
+reg cut = 1'b0;
+
+always@(posedge CLOCK_50)
+begin
+	if(mhz_counter == 26'd49999999 && interval_time !== 2'b00)
+		begin
+			mhz_counter <= 26'd0;
+			if(second_counter == interval_time)
+				// Negate cut if second_counter is equal to interval_time and reset second_counter
+				begin
+					if(cut == 1'b0)
+						begin
+							cut <= 1'b1;
+						end
+					else
+						begin
+							cut <= 1'b0;
+						end
+					second_counter <= 2'b00;
+				end
+			else
+				begin
+					second_counter <= second_counter + 2'b01;
+				end
+		end
+	else
+		begin
+			mhz_counter <= mhz_counter + 26'b1;
+		end
+	
+	if(interval_time == 2'b00)
+		begin
+			mhz_counter <= 26'b0;
+			cut <= 1'b0;
+			left_channel_audio_out = left_channel_audio_in;
+			right_channel_audio_out = right_channel_audio_in;
+		end
+	else
+		if(cut == 1'b0)
+			// Play normally if not cut
+			begin
+				left_channel_audio_out = left_channel_audio_in;
+				right_channel_audio_out = right_channel_audio_in;
+			end
+		else
+			// Play nothing if cut
+			begin
+				left_channel_audio_out = 32'b0;
+				right_channel_audio_out = 32'b0;
+			end
+end
+
+endmodule

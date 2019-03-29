@@ -1,0 +1,22 @@
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate E:\OneDrive\Documents\University\Class_Work_Year_3\CSCB58H3\Project\Project2\system.qsys --synthesis=VERILOG --output-directory=E:\OneDrive\Documents\University\Class_Work_Year_3\CSCB58H3\Project\Project2\system\synthesis --family="Cyclone IV E" --part=EP4CE115F29C7
+Progress: Loading Project2/system.qsys
+Progress: Reading input file
+Progress: Adding clk [clock_source 16.1]
+Progress: Parameterizing module clk
+Progress: Adding sdram [altera_avalon_new_sdram_controller 16.1]
+Progress: Parameterizing module sdram
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: system.sdram: SDRAM Controller will only be supported in Quartus Prime Standard Edition in the future release.
+Info: system: Generating system "system" for QUARTUS_SYNTH
+Info: sdram: Starting RTL generation for module 'system_sdram'
+Info: sdram:   Generation command is [exec C:/intelfpga_lite/16.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/16.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=system_sdram --dir=C:/Users/seanv/AppData/Local/Temp/alt7982_5590020237658822178.dir/0001_sdram_gen/ --quartus_dir=C:/intelfpga_lite/16.1/quartus --verilog --config=C:/Users/seanv/AppData/Local/Temp/alt7982_5590020237658822178.dir/0001_sdram_gen//system_sdram_component_configuration.pl  --do_build_sim=0  ]
+Info: sdram: Done RTL generation for module 'system_sdram'
+Info: sdram: "system" instantiated altera_avalon_new_sdram_controller "sdram"
+Info: rst_controller: "system" instantiated altera_reset_controller "rst_controller"
+Info: system: Done "system" with 3 modules, 5 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
