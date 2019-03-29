@@ -123,22 +123,11 @@ reg snd;
  *                             Sequential Logic                              *
  *****************************************************************************/
 // Assignments
- assign reset = KEY[3];
+assign reset = KEY[3];
 assign play = SW[17];
-assign LEDR[0] = AUD_XCK;
 assign LEDR[1] = reset;
 assign LEDR[2] = play;
 assign LEDR[3] = record;
-// hex display settings
-hex_display h7(address[24:20],HEX7);
-hex_display h0(left_channel_audio_in[19:16],HEX6);
-hex_display h6(left_channel_audio_in[28:25],HEX5);
-hex_display h5(left_channel_audio_in[24:21],HEX4);
-hex_display h4(left_channel_audio_in[20:17],HEX3);
-hex_display h3(left_channel_audio_in[16:13],HEX2);
-hex_display h2(left_channel_audio_in[12:9],HEX1);
-hex_display h1(left_channel_audio_in[8:5],HEX0);
-
 
  
 
@@ -149,7 +138,68 @@ assign write_audio_out = audio_in_available & audio_out_allowed;
 /*****************************************************************************
  *                              Internal Modules                             *
  *****************************************************************************/
+wire [31:0] left_audio_cccor_out;
+wire [31:0] right_audio_cccor_out;
 
+wire [31:0] left_audio_filters_out;
+wire [31:0] right_audio_filters_out;
+
+wire [3:0] count0;
+wire [3:0] count1;
+wire [3:0] count2;
+wire [3:0] count3;
+
+// hex display settings
+hex_display h7(0,HEX7);
+hex_display h0(0,HEX6);
+hex_display h6(0,HEX5);
+hex_display h5(0,HEX4);
+hex_display h4(count3,HEX3);
+hex_display h3(count2,HEX2);
+hex_display h2(count1,HEX1);
+hex_display h1(count0,HEX0);
+
+// Filter Controller
+AllFilters filters(
+	.left_channel_audio_in(left_channel_audio_in),
+	.right_channel_audio_in(right_channel_audio_in),
+	.filter_choice(SW[6:5]),
+	.reset(reset),
+	.AUD_BCLK(AUD_BCLK),
+	.AUD_ADCLRCK(AUD_ADCLRCK),
+	.AUD_DACLRCK(AUD_DACLRCK),
+	.left_channel_audio_out(left_audio_filters_out),
+	.right_channel_audio_out(right_audio_filters_out)
+);
+
+// Volume Controller
+/*
+ * Volume (BETA): 0%, 33%, 66%, 100%
+ * 0% by default
+ * 33% volume if SW[6] high
+ * 66% volume if SW[7] high
+ * 100% volume if SW[7] and SW[6] high
+*/
+/*
+Volume volume(
+	.left_channel_audio_in(left_audio_cccor_out),
+	.right_channel_audio_in(right_audio_cccor_out),
+	.level(SW[7:6]),
+	.left_channel_audio_out(left_channel_audio_out),
+	.right_channel_audio_out(right_channel_audio_out)
+);
+*/
+
+// Cuttoff controller 
+CutOffCutOnRepeat cccor(
+	.left_channel_audio_in(left_audio_filters_out),
+	.right_channel_audio_in(right_audio_filters_out),
+	.interval_time(SW[8:7]),
+	.CLOCK_50(CLOCK_50),
+	.left_channel_audio_out(left_audio_cccor_out),
+	.right_channel_audio_out(right_audio_cccor_out)
+);
+ 
  
 // Loop controllers
 loop l0 (			
@@ -157,8 +207,8 @@ loop l0 (
 .clk							(CLOCK_50),						// in			:System clock set to 50 Mhz
 .readdata					(readdata),						// in [31:0]:Read data from sdram
 .record						(SW[16]),
-.left_channel_audio_in	(left_channel_audio_in),		// in [31:0]:Left audio channel in
-.right_channel_audio_in	(right_channel_audio_in),	// in [31:0]:Right channel audio in
+.left_channel_audio_in	(left_audio_cccor_out),		// in [31:0]:Left audio channel in
+.right_channel_audio_in	(right_audio_cccor_out),	// in [31:0]:Right channel audio in
 .reset						(reset),							// in			:Async Reset
 .channel						(SW[3:0]),							// in [3:0]	:4 way channel Select
 .play							(play),							// in 		:Play read audio
@@ -166,7 +216,11 @@ loop l0 (
 .writedata					(writedata),					// out[31:0]:Data to save on sram
 .write_en					(record),						// out		: whether or not to write to sdram
 .left_channel_audio_out	(left_channel_audio_out),	// out[31:0]:Left channel audio out
-.right_channel_audio_out(right_channel_audio_out)	// out[31:0]:Right channel audio out
+.right_channel_audio_out(right_channel_audio_out),	// out[31:0]:Right channel audio out
+.count0						(count0),						// out 		:counter for the 0th channel
+.count1						(count1),						// out 		:counter for the 1st channel
+.count2						(count2),						// out 		:counter for the 2nd channel
+.count3						(count3)							// out 		:counter for the 3rd channel
 );				
  
 // Sdram module

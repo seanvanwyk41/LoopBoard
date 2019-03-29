@@ -1116,6 +1116,12 @@ set_instance_assignment -name IO_MAXIMUM_TOGGLE_RATE "0 MHz" -to KEY
 set_instance_assignment -name IO_MAXIMUM_TOGGLE_RATE "0 MHz" -to SW
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name VERILOG_FILE CutOffCutOnRepeat/CutOffCutOnRepeat.v
+set_global_assignment -name VERILOG_FILE Volume/Volume.v
+set_global_assignment -name VERILOG_FILE Filters/LowPass.v
+set_global_assignment -name VERILOG_FILE Filters/HighPass.v
+set_global_assignment -name VERILOG_FILE Filters/BandPass.v
+set_global_assignment -name VERILOG_FILE Filters/All.v
 set_global_assignment -name VERILOG_FILE system/synthesis/system.v
 set_global_assignment -name VERILOG_FILE system/synthesis/submodules/altera_reset_synchronizer.v
 set_global_assignment -name VERILOG_FILE system/synthesis/submodules/altera_reset_controller.v
