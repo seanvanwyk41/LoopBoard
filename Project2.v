@@ -123,11 +123,14 @@ reg snd;
  *                             Sequential Logic                              *
  *****************************************************************************/
 // Assignments
-assign reset = KEY[3];
+ assign reset = KEY[3];
 assign play = SW[17];
+assign LEDR[0] = AUD_XCK;
 assign LEDR[1] = reset;
 assign LEDR[2] = play;
 assign LEDR[3] = record;
+
+
 
  
 
@@ -146,20 +149,16 @@ wire [31:0] left_audio_volume_out;
 wire [31:0] right_audio_volume_out;
 wire [1:0] volume_display;
 
-wire [3:0] count0;
-wire [3:0] count1;
-wire [3:0] count2;
-wire [3:0] count3;
 
 // hex display settings
 hex_display h7(0,HEX7);
 hex_display h0(0,HEX6);
 hex_display h6(volume_display,HEX5);
 hex_display h5(0,HEX4);
-hex_display h4(count3,HEX3);
-hex_display h3(count2,HEX2);
-hex_display h2(count1,HEX1);
-hex_display h1(count0,HEX0);
+hex_display h4(0,HEX3);
+hex_display h3(0,HEX2);
+hex_display h2(0,HEX1);
+hex_display h1(address/384000,HEX0);
 
 // Filter Controller
 AllFilters filters(
@@ -210,11 +209,7 @@ loop l0 (
 .writedata					(writedata),					// out[31:0]:Data to save on sram
 .write_en					(record),						// out		: whether or not to write to sdram
 .left_channel_audio_out	(left_channel_audio_out),	// out[31:0]:Left channel audio out
-.right_channel_audio_out(right_channel_audio_out),	// out[31:0]:Right channel audio out
-.count0						(count0),						// out 		:counter for the 0th channel
-.count1						(count1),						// out 		:counter for the 1st channel
-.count2						(count2),						// out 		:counter for the 2nd channel
-.count3						(count3)							// out 		:counter for the 3rd channel
+.right_channel_audio_out(right_channel_audio_out)	// out[31:0]:Right channel audio out
 );				
  
 // Sdram module

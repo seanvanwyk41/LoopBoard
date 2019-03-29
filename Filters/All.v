@@ -47,8 +47,8 @@ begin
 			right_channel_audio_out = right_channel_audio_out_lowpass;
 		end
 		2'b10: begin
-			left_channel_audio_out = left_channel_audio_out_highpass*2;
-			right_channel_audio_out = right_channel_audio_out_highpass*2;
+			left_channel_audio_out = left_channel_audio_out_highpass;
+			right_channel_audio_out = right_channel_audio_out_highpass;
 		end
 		2'b11: begin
 			left_channel_audio_out = left_channel_audio_out_bandpass;
@@ -67,7 +67,7 @@ LowPassFilter lowpass(
 	.reset(reset),
 	.AUD_BCLK(AUD_BCLK),
 	.AUD_DACLRCK(AUD_DACLRCK),
-	.alpha_prime(32'd15),
+	.alpha_prime(32'd50),
 	.left_channel_audio_out(left_channel_audio_out_lowpass),
 	.right_channel_audio_out(right_channel_audio_out_lowpass)
 );
